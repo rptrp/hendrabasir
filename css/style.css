@@ -1,0 +1,365 @@
+:root {
+  --maroon: #6c0102;
+  --red: #d50102;
+  --navy: #013766;
+  --black: #0f1417;
+  --white: #e1e1e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: "Oswald";
+  font-size: 20px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #d50102, #013766);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: -3px 2px 2px rgba(225, 225, 225, 0.5);
+}
+
+.navbar .navbar-brand {
+  font-style: italic;
+  font-family: "Francois One";
+  font-size: 25px;
+  color: var(--white);
+}
+
+.navbar .collapse .nav-link {
+  color: var(--white);
+}
+
+.navbar .collapse .nav-link:hover {
+  color: var(--black);
+}
+
+.navbar .collapse .nav-link.active {
+  font-weight: 900;
+}
+
+/* Jika login diperlukan */
+
+/* .navbar .collapse form button {
+  color: var(--white);
+  background-color: var(--maroon);
+  padding: 3px 18px;
+}
+
+.navbar .collapse form button:hover {
+  scale: 1.05;
+  background-color: var(--white);
+  color: var(--maroon);
+} */
+
+/* Navigasi */
+.navigation {
+  padding-top: 450px;
+  padding-bottom: 25px;
+  background-image: url(../img/hendra_basir.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: var(--white);
+}
+
+.navigation .content {
+  background-color: rgba(213, 1, 1, 0.5);
+  width: 95%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.navigation .content h1 {
+  font-size: 2rem;
+}
+
+.navigation .content p {
+  font-size: 1.2rem;
+  padding: 0px 20px;
+}
+
+/* Profil */
+.profil {
+  padding: 1rem 7%;
+}
+
+/* Artikel */
+.card-slider {
+  padding: 4rem 7%;
+}
+
+.card-slider h3 {
+  color: var(--maroon);
+}
+
+.card-slider .slide {
+  display: flex;
+  overflow-x: auto; /* Membuat slider horizontal dengan scroll */
+  scroll-snap-type: x mandatory; /* Membuat efek "snap" saat scrolling */
+  -webkit-overflow-scrolling: touch; /* Mendukung scroll halus pada perangkat berbasis sentuh */
+}
+
+.card-slider .card {
+  margin: 1rem 0.5rem; /* Mengatur margin di sekitar kartu */
+  flex: 0 0 auto; /* Agar kartu tidak membesar secara otomatis */
+  scroll-snap-align: start; /* Membuat kartu "snap" ke posisi awal saat scrolling */
+  background-color: #f8f9fa; /* Tambahkan latar belakang untuk membedakan kartu */
+  width: 18rem; /* Lebar kartu */
+}
+
+.card-slider .card:hover {
+  border: 1px solid #dee2e6; /* Tambahkan garis tepi untuk membedakan kartu */
+}
+
+.card-slider .card img {
+  width: auto;
+  height: 10rem;
+}
+
+.card-slider .card .card-body .card-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.card-slider .card .card-body .card-text {
+  font-size: 15px;
+  color: var(--navy);
+}
+
+.card-slider .card .card-body a {
+  padding: 0px 10px;
+}
+
+/* Atlet */
+.cards {
+  padding: 4rem 7%;
+}
+
+.cards .sub-cards {
+  background: linear-gradient(to bottom, #6c0102, #013766);
+  margin: 1rem auto;
+  padding: 1rem 2rem 7%;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cards h3 {
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+
+.cards .card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  padding-top: 1rem;
+}
+
+.cards .card {
+  margin: 0 auto; /* Mengatur margin di sekitar kartu */
+  flex: 0 0 auto; /* Agar kartu tidak membesar secara otomatis */
+  width: 90%; /* Lebar kartu */
+  text-align: center;
+  cursor: pointer;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.4s;
+  background-color: white;
+  color: var(--navy);
+  border-radius: 10px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.cards .card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: translate(0px, -8px);
+}
+
+.cards .card img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
+  text-align: center;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cards .card h1 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+}
+
+.cards .more {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.cards .more a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.cards .more a:hover {
+  color: var(--maroon);
+}
+
+/* Profil Atlet */
+.cards .sub-cards .search {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards .sub-cards .search input {
+  width: 80%;
+  padding: 1px 10px;
+  border: 1px solid var(--white);
+  border-radius: 3px;
+}
+
+.cards .sub-cards .search button {
+  padding: 2px 25px;
+  border: 1px solid var(--black);
+  border-radius: 3px;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.cards .sub-cards .search button i {
+  padding-right: 8px;
+}
+
+.cards .sub-cards .message {
+  margin: 75px 0;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Francois One";
+  text-align: center;
+  color: var(--white);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--black);
+  padding: 4rem 7% 1rem;
+}
+
+.footer .content {
+  display: flex;
+  font-family: "Francois One";
+}
+
+.footer .content .kontak {
+  flex: 1 1 28rem;
+  color: var(--white);
+}
+
+.footer .content .kontak p {
+  font-size: 0.8rem;
+}
+
+.footer .content .info {
+  flex: 1 1 50rem;
+}
+
+.footer .content .info .sub-info {
+  display: flex;
+  justify-content: right;
+}
+
+.footer .content .info .sub-info a {
+  font-size: 1rem;
+  color: var(--white);
+  padding: 0.6rem 0rem;
+  text-decoration: none;
+}
+
+.footer .content .info .sub-info a:hover {
+  color: var(--red);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+
+  .profil p {
+    font-size: 16px;
+  }
+
+  .card-slider .card .card-body .card-title {
+    font-size: 18px;
+  }
+
+  .cards .card {
+    margin-top: 2rem;
+  }
+
+  .cards .sub-cards {
+    margin: 4rem auto;
+  }
+
+  .cards .sub-cards .search input {
+    width: 70%;
+  }
+
+  .cards .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cards .card-grid .card {
+    margin-bottom: 2rem;
+  }
+
+  .cards .card-grid .card h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  .cards .sub-cards .search input {
+    width: 75%;
+  }
+
+  .cards .sub-cards .search button {
+    padding: 2px 15px;
+  }
+
+  .cards .sub-cards .search button i {
+    padding: 0;
+  }
+
+  .cards .sub-cards .search button span {
+    display: none;
+  }
+
+  .cards .sub-cards .message {
+    font-size: 1.5rem;
+  }
+}

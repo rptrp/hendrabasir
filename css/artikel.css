@@ -1,0 +1,223 @@
+:root {
+  --maroon: #6c0102;
+  --red: #d50102;
+  --navy: #013766;
+  --black: #0f1417;
+  --white: #e1e1e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: "Oswald";
+  font-size: 20px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #d50102, #013766);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: -3px 2px 2px rgba(225, 225, 225, 0.5);
+}
+
+.navbar .navbar-brand {
+  font-style: italic;
+  font-family: "Francois One";
+  font-size: 25px;
+  color: var(--white);
+}
+
+.navbar .collapse .nav-link {
+  color: var(--white);
+}
+
+.navbar .collapse .nav-link:hover {
+  color: var(--black);
+}
+
+.navbar .collapse .nav-link.active {
+  font-weight: 900;
+}
+
+/* Jika diperlukan login */
+
+/* .navbar .collapse form button {
+  color: var(--white);
+  background-color: var(--maroon);
+  padding: 3px 18px;
+}
+
+.navbar .collapse form button:hover {
+  scale: 1.05;
+  background-color: var(--white);
+  color: var(--maroon);
+} */
+
+.navigation {
+  padding-top: 3.5rem;
+}
+
+.navigation p {
+  background-color: var(--white);
+  color: rgba(15, 20, 23, 0.5);
+  font-size: 14px;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.artikel {
+  padding: 1rem 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.artikel .sub-artikel {
+  padding: 1.5rem;
+  padding-bottom: 5rem;
+  padding-top: 0;
+}
+
+.artikel .sub-artikel img {
+  width: 100%;
+  height: auto;
+}
+
+.artikel .sub-artikel h4 {
+  font-weight: 900;
+  padding: 20px 0;
+}
+
+.artikel .sub-artikel .calendar {
+  display: flex;
+  padding: 0;
+}
+
+.artikel .sub-artikel .calendar p {
+  font-size: 14px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.artikel .sub-artikel p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.artikel .list-artikel {
+  padding-top: 1rem;
+  background-color: whitesmoke;
+}
+
+.artikel .list-artikel .container {
+  padding: 1.5rem;
+}
+
+.artikel .list-artikel h4 {
+  text-align: center;
+  color: var(--maroon);
+}
+
+.artikel .list-artikel .container .card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.artikel .list-artikel .container .card:hover {
+  scale: 1.05;
+  transition: 0.4s;
+}
+
+.artikel .list-artikel .container .card a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.artikel .list-artikel .container .card a:hover {
+  color: var(--navy);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--black);
+  padding: 4rem 7% 1rem;
+}
+
+.footer .content {
+  display: flex;
+  font-family: "Francois One";
+}
+
+.footer .content .kontak {
+  flex: 1 1 28rem;
+  color: var(--white);
+}
+
+.footer .content .kontak p {
+  font-size: 0.8rem;
+}
+
+.footer .content .info {
+  flex: 1 1 50rem;
+}
+
+.footer .content .info .sub-info {
+  display: flex;
+  justify-content: right;
+}
+
+.footer .content .info .sub-info a {
+  font-size: 1rem;
+  color: var(--white);
+  padding: 0.6rem 0rem;
+  text-decoration: none;
+}
+
+.footer .content .info .sub-info a:hover {
+  color: var(--red);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+
+  .navigation {
+    padding-top: 4.5rem;
+  }
+
+  .artikel {
+    display: flex;
+  }
+}
+
+@media (max-width: 450px) {
+  .artikel {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .artikel .list-artikel {
+    padding-top: 1rem;
+    width: 90%;
+  }
+
+  .artikel .list-artikel .container .card {
+    margin: 0 auto;
+  }
+}
